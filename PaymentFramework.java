@@ -11,7 +11,7 @@ public abstract class PaymentFramework {
     public abstract double applyDiscount();
 
     public void applyVAT() {
-        finalAmount = amount * 1.12;
+        final amount = amount * 1.12;
     }
 
     public void finalizeTransaction() {
@@ -24,7 +24,7 @@ public abstract class PaymentFramework {
     public boolean processInvoice() {
         if (validatePayment()) {
             applyVAT();
-            finalAmount -= applyDiscount();
+            finala amount -= applyDiscount();
             finalizeTransaction();
             return true;
         } else {
